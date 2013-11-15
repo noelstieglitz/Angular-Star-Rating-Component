@@ -1,0 +1,35 @@
+html, body {
+    margin: 15px;
+}
+
+h2{
+    color:white;
+}
+h3{
+    color: white;
+}
+
+div{
+    vertical-align: top;
+}
+
+.active{
+    text-decoration: none;
+    cursor: default;
+    color: #000;
+}
+.title{
+    background-color: #ec1c23;
+    padding: 10px;
+
+}
+
+.movie-item{
+    border : 1px solid #ec1c23;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: ghostwhite;
+}
+
+

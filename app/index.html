@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app="notflixApp">
+<head>
+    <meta charset="utf-8">
+    <title>Notflix</title>
+    <link rel="stylesheet" href="css/libs/normalize.css">
+    <link rel="stylesheet" href="css/libs/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div ng-view>
+  <div class="title">
+      <h2>Welcome to Notflix</h2>
+  </div>
+  <hr/>
+  <div class="title">
+      <h3>Recently Watched</h3>
+  </div>
+  <div  ng-controller="MoviesController">
+      <div ng-repeat="movie in movies" class="movie-item">
+          <h1>{{movie.title}}</h1>
+          <star-rating star-rating="movie.starRating" max-star-rating="movie.maxStarRating" rating-changed="updateModel(newRating)"></star-rating>
+          <small>Year Released </small><label> {{ movie.releasedYear }}</label>
+          <br/>
+          <small>Critic Review </small><label> {{ movie.review }}</label>
+      </div>
+  </div>
+</div>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/directives.js"></script>
+</body>
+</html>
