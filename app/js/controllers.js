@@ -1,7 +1,7 @@
 'use strict';
 
 notflixApp.controller('MoviesController',
-    function($scope, $window){
+    function($scope){
         $scope.movies =  [{
             id : 1,
             title : 'Blood Sport',
@@ -28,6 +28,7 @@ notflixApp.controller('MoviesController',
         }];
 
         $scope.updateModel = function(newRating){
+            //TODO - tell the server
             console.log(newRating);
         }
     });
